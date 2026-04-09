@@ -23,12 +23,19 @@ export default function App() {
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <div className="flex items-center gap-2">
-              <div className="bg-blue-600 p-2 rounded-xl">
-                <Brain className="w-8 h-8 text-white" />
+            <div className="flex items-center gap-1.5">
+              <div className="grid grid-cols-2 gap-1 w-10 h-10">
+                <div className="bg-[#f58220] rounded-bl-full"></div>
+                <div className="bg-[#1a1499] relative">
+                  <div className="absolute top-0 right-0 w-0 h-0 border-t-[14px] border-t-white border-l-[14px] border-l-transparent"></div>
+                </div>
+                <div className="bg-[#1a1499] rounded-tl-full"></div>
+                <div className="bg-[#f58220] rounded-xl flex items-center justify-center">
+                  <div className="w-3 h-1.5 bg-white rounded-l-full ml-1.5"></div>
+                </div>
               </div>
-              <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
-                AI EduKids
+              <span className="text-3xl font-black text-[#1a1499] tracking-widest uppercase ml-1">
+                Eureka
               </span>
             </div>
             
@@ -168,34 +175,81 @@ export default function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
+      <section id="about" className="py-16 md:py-24 bg-white relative overflow-hidden">
+        {/* Decorative background */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+          <div className="absolute -top-[10%] -right-[5%] w-[30%] h-[50%] rounded-full bg-blue-50/50 blur-3xl"></div>
+          <div className="absolute top-[40%] -left-[10%] w-[30%] h-[50%] rounded-full bg-orange-50/50 blur-3xl"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4 sm:mb-6">Về AI EduKids</h2>
-              <p className="text-base sm:text-lg text-slate-600 mb-4 leading-relaxed">
-                AI EduKids được thành lập với sứ mệnh mang giáo dục Trí tuệ nhân tạo (AI) đến gần hơn với trẻ em Việt Nam. Chúng tôi tin rằng AI không chỉ là công nghệ của tương lai, mà là công cụ của hiện tại để các em thỏa sức sáng tạo và phát triển tư duy.
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 text-orange-600 font-medium mb-6 border border-orange-100">
+                <Star className="w-4 h-4" />
+                <span>Câu chuyện của chúng tôi</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+                Khơi dậy đam mê <br className="hidden sm:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1a1499] to-[#f58220]">công nghệ</span> từ sớm
+              </h2>
+              <p className="text-base sm:text-lg text-slate-600 mb-6 leading-relaxed">
+                Eureka được thành lập với sứ mệnh mang giáo dục Trí tuệ nhân tạo (AI) đến gần hơn với trẻ em Việt Nam. Chúng tôi tin rằng AI không chỉ là công nghệ của tương lai, mà là công cụ của hiện tại để các em thỏa sức sáng tạo và phát triển tư duy.
               </p>
-              <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-                Với đội ngũ chuyên gia công nghệ và giáo dục tâm huyết, chúng tôi thiết kế lộ trình học tập cá nhân hóa, kết hợp giữa lý thuyết chuẩn quốc tế và thực hành sinh động, giúp các em học sinh từ 7-15 tuổi dễ dàng tiếp cận và làm chủ công nghệ.
-              </p>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-1">
+                    <CheckCircle2 className="w-4 h-4 text-green-600" />
+                  </div>
+                  <p className="text-slate-700"><span className="font-semibold text-slate-900">Phương pháp thực hành:</span> Học qua dự án thực tế, tạo ra sản phẩm ngay trong lớp.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-1">
+                    <CheckCircle2 className="w-4 h-4 text-green-600" />
+                  </div>
+                  <p className="text-slate-700"><span className="font-semibold text-slate-900">Giáo trình quốc tế:</span> Được tinh chỉnh phù hợp với văn hóa và cách tiếp thu của trẻ em Việt Nam.</p>
+                </div>
+              </div>
+
+              <a href="#courses" className="inline-flex items-center gap-2 text-[#1a1499] font-bold hover:gap-3 transition-all">
+                Khám phá lộ trình học <ChevronRight className="w-5 h-5" />
+              </a>
             </motion.div>
+            
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative mt-8 md:mt-0"
+              className="relative mt-8 lg:mt-0"
             >
-              <div className="aspect-video rounded-[2rem] overflow-hidden shadow-xl">
-                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop" alt="Lớp học AI" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent z-10 pointer-events-none"></div>
+                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop" alt="Lớp học AI" className="w-full h-full object-cover aspect-[4/3] transform hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer" />
               </div>
-              <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white p-3 sm:p-4 rounded-2xl shadow-lg border border-slate-100 flex items-center gap-3 sm:gap-4">
-                <div className="text-blue-600 font-bold text-2xl sm:text-3xl">5+</div>
-                <div className="text-xs sm:text-sm text-slate-600 font-medium">Năm<br/>Kinh nghiệm</div>
+              
+              {/* Floating elements */}
+              <div className="absolute -bottom-6 -left-6 sm:-bottom-8 sm:-left-8 bg-white p-4 sm:p-6 rounded-3xl shadow-xl border border-slate-100 flex items-center gap-4 z-20">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[#1a1499] rounded-2xl flex items-center justify-center text-white font-bold text-xl sm:text-2xl">
+                  5+
+                </div>
+                <div>
+                  <p className="text-sm sm:text-base text-slate-500 font-medium">Năm</p>
+                  <p className="font-bold text-slate-900 text-sm sm:text-base">Kinh nghiệm</p>
+                </div>
+              </div>
+
+              <div className="absolute -top-6 -right-6 sm:-top-8 sm:-right-8 bg-white p-4 sm:p-6 rounded-3xl shadow-xl border border-slate-100 flex items-center gap-4 z-20">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[#f58220] rounded-2xl flex items-center justify-center text-white">
+                  <Star className="w-6 h-6 sm:w-7 sm:h-7" />
+                </div>
+                <div>
+                  <p className="font-bold text-slate-900 text-sm sm:text-base">1000+</p>
+                  <p className="text-sm sm:text-base text-slate-500 font-medium">Học viên</p>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -264,16 +318,16 @@ export default function App() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-slate-50 rounded-[2rem] p-6 sm:p-8 shadow-sm border border-slate-200 relative overflow-hidden"
+              className="bg-white rounded-[2rem] p-6 sm:p-8 shadow-xl border-2 border-blue-200 hover:border-blue-500 hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
             >
-              <div className="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 rounded-bl-2xl font-medium text-sm">
+              <div className="absolute top-0 right-0 bg-blue-500 text-white px-4 py-1 rounded-bl-2xl font-medium text-sm z-10">
                 7 - 10 Tuổi
               </div>
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">AI Explorer</h3>
+              <div className="mb-6 relative z-10">
+                <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">AI Explorer</h3>
                 <p className="text-slate-500">Khám phá thế giới Trí tuệ nhân tạo</p>
               </div>
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-4 mb-8 relative z-10">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-blue-500 shrink-0" />
                   <span className="text-slate-700">Làm quen với khái niệm AI qua trò chơi</span>
@@ -287,7 +341,7 @@ export default function App() {
                   <span className="text-slate-700">Lập trình khối lệnh cơ bản với AI</span>
                 </li>
               </ul>
-              <a href="#register" className="block w-full text-center bg-blue-50 hover:bg-blue-100 text-blue-700 font-bold py-3 rounded-xl transition-colors">
+              <a href="#register" className="block w-full text-center bg-blue-50 hover:bg-blue-600 hover:text-white text-blue-700 font-bold py-3 rounded-xl transition-all relative z-10">
                 Đăng ký tư vấn
               </a>
             </motion.div>
@@ -297,30 +351,30 @@ export default function App() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-[2rem] p-6 sm:p-8 shadow-xl border-2 border-blue-600 relative overflow-hidden"
+              className="bg-white rounded-[2rem] p-6 sm:p-8 shadow-xl border-2 border-orange-200 hover:border-orange-500 hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
             >
-              <div className="absolute top-0 right-0 bg-orange-500 text-white px-4 py-1 rounded-bl-2xl font-medium text-sm">
+              <div className="absolute top-0 right-0 bg-orange-500 text-white px-4 py-1 rounded-bl-2xl font-medium text-sm z-10">
                 11 - 15 Tuổi
               </div>
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">AI Creator</h3>
+              <div className="mb-6 relative z-10">
+                <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">AI Creator</h3>
                 <p className="text-slate-500">Kiến tạo sản phẩm với Trí tuệ nhân tạo</p>
               </div>
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-4 mb-8 relative z-10">
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-blue-500 shrink-0" />
+                  <CheckCircle2 className="w-6 h-6 text-orange-500 shrink-0" />
                   <span className="text-slate-700">Hiểu sâu về Machine Learning & Deep Learning</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-blue-500 shrink-0" />
+                  <CheckCircle2 className="w-6 h-6 text-orange-500 shrink-0" />
                   <span className="text-slate-700">Tự xây dựng Chatbot và trợ lý ảo cá nhân</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-blue-500 shrink-0" />
+                  <CheckCircle2 className="w-6 h-6 text-orange-500 shrink-0" />
                   <span className="text-slate-700">Lập trình Python ứng dụng AI thực tế</span>
                 </li>
               </ul>
-              <a href="#register" className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-colors shadow-lg shadow-blue-600/20">
+              <a href="#register" className="block w-full text-center bg-orange-50 hover:bg-orange-500 hover:text-white text-orange-700 font-bold py-3 rounded-xl transition-all relative z-10">
                 Đăng ký tư vấn
               </a>
             </motion.div>
@@ -336,12 +390,19 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="col-span-2">
-              <div className="flex items-center gap-2 mb-6">
-                <div className="bg-blue-600 p-1.5 rounded-lg">
-                  <Brain className="w-6 h-6 text-white" />
+              <div className="flex items-center gap-1.5 mb-6">
+                <div className="grid grid-cols-2 gap-1 w-8 h-8">
+                  <div className="bg-[#f58220] rounded-bl-full"></div>
+                  <div className="bg-[#1a1499] relative">
+                    <div className="absolute top-0 right-0 w-0 h-0 border-t-[10px] border-t-slate-900 border-l-[10px] border-l-transparent"></div>
+                  </div>
+                  <div className="bg-[#1a1499] rounded-tl-full"></div>
+                  <div className="bg-[#f58220] rounded-lg flex items-center justify-center">
+                    <div className="w-2 h-1 bg-slate-900 rounded-l-full ml-1"></div>
+                  </div>
                 </div>
-                <span className="text-xl font-bold text-white">
-                  AI EduKids
+                <span className="text-2xl font-black text-white tracking-widest uppercase ml-1">
+                  Eureka
                 </span>
               </div>
               <p className="text-slate-400 max-w-sm mb-6">
@@ -366,7 +427,7 @@ export default function App() {
             </div>
           </div>
           <div className="border-t border-slate-800 mt-12 pt-8 text-center text-sm text-slate-500">
-            © 2026 AI EduKids. All rights reserved.
+            © 2026 Eureka. All rights reserved.
           </div>
         </div>
       </footer>
