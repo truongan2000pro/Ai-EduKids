@@ -1,81 +1,112 @@
 import { motion } from 'motion/react';
-import { CheckCircle2 } from 'lucide-react';
+import { Clock, Users, ArrowRight } from 'lucide-react';
+
+const courses = [
+  {
+    title: "Giao Tiếp Lành Mạnh & Xử Lý Bắt Nạt",
+    age: "Lớp 6-9 (THCS)",
+    time: "4 buổi × 60-70 phút",
+    price: "1.000.000đ",
+    desc: "Học sinh sẽ học cách giao tiếp lành mạnh, nhận biết bắt nạt, xử lý hiệu quả, xây dựng mối quan hệ tích cực."
+  },
+  {
+    title: "Nhận Biết Tin Giả & Tư Duy Phản Biện",
+    age: "Lớp 6-9 (THCS)",
+    time: "5 buổi × 60-70 phút",
+    price: "1.300.000đ",
+    desc: "Học cách tìm kiếm thông tin, đánh giá độ tin cậy, nhận biết tin giả và phát triển tư duy phản biện."
+  },
+  {
+    title: "Quản Lý Thời Gian & Sức Khỏe Số",
+    age: "Lớp 6-9 (THCS)",
+    time: "4 buổi × 60-70 phút",
+    price: "1.000.000đ",
+    desc: "Quản lý thời gian sử dụng internet, bảo vệ sức khỏe (mắt, lưng), cân bằng học tập & giải trí."
+  },
+  {
+    title: "An Toàn Thông Tin & Phòng Lừa Đảo",
+    age: "Lớp 6-9 (THCS)",
+    time: "4 buổi × 60-70 phút",
+    price: "1.000.000đ",
+    desc: "Bảo vệ thông tin cá nhân, nhận biết các chiêu trò lừa đảo qua mạng và cách xử lý khi bị lộ thông tin."
+  },
+  {
+    title: "Công Dân Số - Quyền & Trách Nhiệm",
+    age: "Lớp 6-9 (THCS)",
+    time: "5 buổi × 60-70 phút",
+    price: "1.300.000đ",
+    desc: "Hiểu quyền lợi trực tuyến, trách nhiệm pháp lý, hành xử đúng đắn, các luật lệ liên quan đến không gian mạng."
+  },
+  {
+    title: "Sáng Tạo & Tự Tin Biểu Đạt",
+    age: "Lớp 6-9 (THCS)",
+    time: "5 buổi × 60-70 phút",
+    price: "1.300.000đ",
+    desc: "Học cách tạo nội dung (video, hình ảnh, bài viết), chia sẻ an toàn và xây dựng sự tự tin."
+  },
+  {
+    title: "Định Hướng Nghề Nghiệp Số",
+    age: "Lớp 6-9 (THCS)",
+    time: "6 buổi × 60-70 phút",
+    price: "1.500.000đ",
+    desc: "Hiểu các nghề nghiệp tương lai trong kỷ nguyên số, kỹ năng cần chuẩn bị và định hướng chặng đường tiếp theo."
+  }
+];
 
 export function Courses() {
   return (
-    <section id="courses" className="py-16 md:py-20 bg-white">
+    <section id="courses" className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4 sm:mb-6">Lộ trình học tập cá nhân hóa</h2>
-          <p className="text-base sm:text-lg text-slate-600">Chương trình được thiết kế phù hợp với từng độ tuổi và khả năng tiếp thu của trẻ.</p>
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">Các Khóa Học Của Eureka</h2>
+          <p className="text-lg text-slate-600 leading-relaxed">
+            Chương trình học được thiết kế phù hợp với từng độ tuổi và năng lực của học sinh. 
+            Mỗi khóa tập trung vào kỹ năng cần thiết, giá trị thực tế và sự phát triển toàn diện.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Course 1 */}
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-[2rem] p-6 sm:p-8 shadow-xl border-2 border-blue-200 hover:border-blue-500 hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
-          >
-            <div className="absolute top-0 right-0 bg-blue-500 text-white px-4 py-1 rounded-bl-2xl font-medium text-sm z-10">
-              7 - 10 Tuổi
-            </div>
-            <div className="mb-6 relative z-10">
-              <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">AI Explorer</h3>
-              <p className="text-slate-500">Khám phá thế giới Trí tuệ nhân tạo</p>
-            </div>
-            <ul className="space-y-4 mb-8 relative z-10">
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-6 h-6 text-blue-500 shrink-0" />
-                <span className="text-slate-700">Làm quen với khái niệm AI qua trò chơi</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-6 h-6 text-blue-500 shrink-0" />
-                <span className="text-slate-700">Sáng tạo nghệ thuật với Generative AI</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-6 h-6 text-blue-500 shrink-0" />
-                <span className="text-slate-700">Lập trình khối lệnh cơ bản với AI</span>
-              </li>
-            </ul>
-            <a href="#register" className="block w-full text-center bg-blue-50 hover:bg-blue-600 hover:text-white text-blue-700 font-bold py-3 rounded-xl transition-all relative z-10">
-              Đăng ký tư vấn
-            </a>
-          </motion.div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
+          {courses.map((course, idx) => (
+            <motion.div 
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 hover:shadow-2xl hover:border-blue-300 transition-all duration-300 flex flex-col h-full group"
+            >
+              <div className="mb-6 flex-grow">
+                <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors line-clamp-2">
+                  {course.title}
+                </h3>
+                
+                <div className="space-y-3 mb-4">
+                  <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
+                    <Users className="w-4 h-4 text-slate-400" />
+                    Độ tuổi: {course.age}
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
+                    <Clock className="w-4 h-4 text-slate-400" />
+                    Thời gian: {course.time}
+                  </div>
+                </div>
+                
+                <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                  {course.desc}
+                </p>
+              </div>
 
-          {/* Course 2 */}
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-[2rem] p-6 sm:p-8 shadow-xl border-2 border-orange-200 hover:border-orange-500 hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
-          >
-            <div className="absolute top-0 right-0 bg-orange-500 text-white px-4 py-1 rounded-bl-2xl font-medium text-sm z-10">
-              11 - 15 Tuổi
-            </div>
-            <div className="mb-6 relative z-10">
-              <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition-colors">AI Creator</h3>
-              <p className="text-slate-500">Kiến tạo sản phẩm với Trí tuệ nhân tạo</p>
-            </div>
-            <ul className="space-y-4 mb-8 relative z-10">
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-6 h-6 text-orange-500 shrink-0" />
-                <span className="text-slate-700">Hiểu sâu về Machine Learning & Deep Learning</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-6 h-6 text-orange-500 shrink-0" />
-                <span className="text-slate-700">Tự xây dựng Chatbot và trợ lý ảo cá nhân</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="w-6 h-6 text-orange-500 shrink-0" />
-                <span className="text-slate-700">Lập trình Python ứng dụng AI thực tế</span>
-              </li>
-            </ul>
-            <a href="#register" className="block w-full text-center bg-orange-50 hover:bg-orange-500 hover:text-white text-orange-700 font-bold py-3 rounded-xl transition-all relative z-10">
-              Đăng ký tư vấn
-            </a>
-          </motion.div>
+              <div className="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+                <div>
+                  <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">Học phí</p>
+                  <p className="font-bold text-lg text-orange-600">{course.price}</p>
+                </div>
+                <a href="#register" className="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,10 +1,14 @@
 import { Navbar } from './components/layout/Navbar';
-import { Footer } from './components/layout/Footer';
 import { Hero } from './components/sections/Hero';
 import { About } from './components/sections/About';
 import { Benefits } from './components/sections/Benefits';
 import { Courses } from './components/sections/Courses';
+import { Community } from './components/sections/Community';
+import { Testimonials } from './components/sections/Testimonials';
+import { FAQ } from './components/sections/FAQ';
+import { CallToAction } from './components/sections/CallToAction';
 import { RegistrationForm } from './components/sections/RegistrationForm';
+import { Footer } from './components/layout/Footer';
 
 export default function App() {
   return (
@@ -14,6 +18,10 @@ export default function App() {
       <About />
       <Benefits />
       <Courses />
+      <Community />
+      <Testimonials />
+      <FAQ />
+      <CallToAction />
       <RegistrationForm />
       <Footer />
     </div>

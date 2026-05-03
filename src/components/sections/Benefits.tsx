@@ -1,49 +1,60 @@
 import { motion } from 'motion/react';
-import { Brain, Rocket, Shield } from 'lucide-react';
+import { Brain, Palette, Shield } from 'lucide-react';
 
 export function Benefits() {
+  const benefits = [
+    {
+      icon: <Brain className="w-10 h-10 text-indigo-500" />,
+      title: "Phát Triển Tư Duy Tích Cực",
+      desc: "Học sinh sẽ phát triển tư duy phản biện, sáng tạo, giải quyết vấn đề hiệu quả. Không chỉ học công nghệ, mà học cách suy nghĩ.",
+      color: "from-indigo-50 to-white",
+      borderColor: "border-indigo-100"
+    },
+    {
+      icon: <Palette className="w-10 h-10 text-orange-500" />,
+      title: "Kỹ Năng Sáng Tạo & Biểu Đạt",
+      desc: "Sử dụng công cụ số để tạo nội dung, biểu đạt ý tưởng, xây dựng dự án. Từ lập trình, thiết kế, đến tạo video, học sinh có cơ hội thể hiện sáng tạo.",
+      color: "from-orange-50 to-white",
+      borderColor: "border-orange-100"
+    },
+    {
+      icon: <Shield className="w-10 h-10 text-green-500" />,
+      title: "An Toàn & Trách Nhiệm Trực Tuyến",
+      desc: "Học sinh hiểu cách bảo vệ bản thân, quyền riêng tư, và trách nhiệm khi sử dụng công nghệ. Trở thành công dân số có trách nhiệm.",
+      color: "from-green-50 to-white",
+      borderColor: "border-green-100"
+    }
+  ];
+
   return (
-    <section id="benefits" className="py-16 md:py-20 bg-slate-50">
+    <section id="benefits" className="py-20 md:py-28 bg-slate-50 border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4 sm:mb-6">Tại sao trẻ em cần học AI ngay hôm nay?</h2>
-          <p className="text-base sm:text-lg text-slate-600">Trong kỷ nguyên số, AI không chỉ là công cụ mà là ngôn ngữ mới. Hiểu về AI giúp trẻ tự tin bước vào tương lai.</p>
+        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
+            Tại Sao Con Em Cần Học Năng Lực Số?
+          </h2>
+          <p className="text-lg text-slate-600 leading-relaxed">
+            Trong kỷ nguyên số, năng lực số không phải là lựa chọn, mà là nhu cầu cần thiết. Con em không chỉ cần học công nghệ, mà cần phát triển tư duy, kỹ năng và nhân cách để thích ứng với thế giới đang thay đổi nhanh chóng.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {[
-            {
-              icon: <Brain className="w-8 h-8 text-blue-600" />,
-              title: "Phát triển tư duy logic",
-              desc: "Học cách AI hoạt động giúp trẻ rèn luyện tư duy phản biện, giải quyết vấn đề một cách có hệ thống.",
-              color: "bg-blue-50"
-            },
-            {
-              icon: <Rocket className="w-8 h-8 text-orange-600" />,
-              title: "Kích thích sáng tạo",
-              desc: "Sử dụng AI như một người trợ lý để hiện thực hóa các ý tưởng sáng tạo, vẽ tranh, làm phim, viết truyện.",
-              color: "bg-orange-50"
-            },
-            {
-              icon: <Shield className="w-8 h-8 text-green-600" />,
-              title: "Sử dụng công nghệ an toàn",
-              desc: "Hiểu rõ bản chất của AI giúp trẻ biết cách bảo vệ thông tin cá nhân và sử dụng công nghệ có đạo đức.",
-              color: "bg-green-50"
-            }
-          ].map((item, idx) => (
+          {benefits.map((item, idx) => (
             <motion.div 
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.2 }}
-              className="p-6 sm:p-8 rounded-3xl border border-slate-100 hover:shadow-xl transition-shadow bg-white"
+              transition={{ delay: idx * 0.15, duration: 0.5 }}
+              className={`p-8 sm:p-10 rounded-[2rem] bg-gradient-to-b ${item.color} border ${item.borderColor} shadow-sm hover:shadow-2xl transition-all duration-300 group`}
             >
-              <div className={`w-16 h-16 rounded-2xl ${item.color} flex items-center justify-center mb-6`}>
-                {item.icon}
+              <div className="mb-8 transform group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-300">
+                <div className="w-20 h-20 bg-white rounded-2xl shadow-md flex items-center justify-center border border-slate-50">
+                  {item.icon}
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-4">{item.title}</h3>
-              <p className="text-slate-600 leading-relaxed">{item.desc}</p>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4 leading-snug">{item.title}</h3>
+              <p className="text-slate-600 leading-relaxed text-lg">{item.desc}</p>
             </motion.div>
           ))}
         </div>

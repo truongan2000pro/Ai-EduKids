@@ -62,7 +62,7 @@ export function RegistrationForm() {
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl"></div>
             
             <div className="relative z-10">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4">Đăng ký tư vấn lộ trình học AI</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold mb-4">Đăng Ký Khóa Học</h3>
               <p className="text-slate-300 mb-8 text-base sm:text-lg">
                 Hãy để lại thông tin, chuyên viên giáo dục của chúng tôi sẽ liên hệ tư vấn lộ trình phù hợp nhất cho con bạn trong vòng 24h.
               </p>
