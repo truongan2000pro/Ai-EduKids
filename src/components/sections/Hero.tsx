@@ -36,13 +36,13 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href="#courses" 
-                className="inline-flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40 hover:-translate-y-1"
+                className="inline-flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40 hover:-translate-y-1 active:scale-95"
               >
                 Khám Phá Khóa Học
               </a>
               <a 
                 href="#community" 
-                className="inline-flex justify-center items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg transition-all hover:border-slate-300 hover:shadow-md"
+                className="inline-flex justify-center items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg transition-all hover:border-slate-300 hover:shadow-md active:scale-95"
               >
                 Tham Gia Cộng Đồng
               </a>

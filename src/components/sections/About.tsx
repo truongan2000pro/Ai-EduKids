@@ -75,7 +75,7 @@ export function About() {
 
             <a 
               href="#courses" 
-              className="inline-flex items-center gap-3 text-white bg-slate-900 hover:bg-slate-800 px-8 py-4 rounded-full font-bold transition-all hover:-translate-y-1 hover:shadow-xl"
+              className="inline-flex items-center gap-3 text-white bg-slate-900 hover:bg-slate-800 px-8 py-4 rounded-full font-bold transition-all hover:-translate-y-1 hover:shadow-xl active:scale-95"
             >
               Tìm Hiểu Thêm Về Khóa Học
             </a>

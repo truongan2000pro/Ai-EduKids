@@ -27,14 +27,14 @@ export function CallToAction() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
             <a 
               href="#register" 
-              className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-[0_0_30px_rgba(249,115,22,0.3)] hover:shadow-[0_0_50px_rgba(249,115,22,0.5)] hover:-translate-y-1"
+              className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-[0_0_30px_rgba(249,115,22,0.3)] hover:shadow-[0_0_50px_rgba(249,115,22,0.5)] hover:-translate-y-1 active:scale-95"
             >
               Đăng Ký Khóa Học
               <ArrowRight className="w-5 h-5" />
             </a>
             <a 
               href="#community" 
-              className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-full font-bold text-lg backdrop-blur-sm transition-all hover:-translate-y-1"
+              className="w-full sm:w-auto inline-flex justify-center items-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-full font-bold text-lg backdrop-blur-sm transition-all hover:-translate-y-1 active:scale-95"
             >
               <Users className="w-5 h-5" />
               Tham Gia Cộng Đồng

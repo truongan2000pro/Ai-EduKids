@@ -101,7 +101,7 @@ export function Courses() {
                   <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mb-1">Học phí</p>
                   <p className="font-bold text-lg text-orange-600">{course.price}</p>
                 </div>
-                <a href="#register" className="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                <a href="#register" className="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors active:scale-95">
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </div>

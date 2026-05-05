@@ -45,8 +45,12 @@ export function FAQ() {
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
-              <div 
+              <motion.div 
                 key={idx} 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1, duration: 0.5 }}
                 className={`border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-300 ${isOpen ? 'bg-slate-50 border-blue-200' : 'bg-white'}`}
               >
                 <button
@@ -74,7 +78,7 @@ export function FAQ() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </div>
+              </motion.div>
             );
           })}
         </div>

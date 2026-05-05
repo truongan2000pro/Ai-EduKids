@@ -70,7 +70,7 @@ export function Community() {
             href="https://facebook.com/groups/eurekacommunity" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 py-5 rounded-full font-bold text-xl transition-all shadow-[0_0_40px_rgba(249,115,22,0.4)] hover:shadow-[0_0_60px_rgba(249,115,22,0.6)] hover:-translate-y-1 w-full sm:w-auto"
+            className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-8 py-5 rounded-full font-bold text-xl transition-all shadow-[0_0_40px_rgba(249,115,22,0.4)] hover:shadow-[0_0_60px_rgba(249,115,22,0.6)] hover:-translate-y-1 active:scale-95 w-full sm:w-auto"
           >
             Tham Gia Cộng Đồng Ngay
             <ArrowRight className="w-6 h-6" />

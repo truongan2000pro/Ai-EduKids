@@ -22,7 +22,7 @@ export function Navbar() {
             <a href="#footer" className="text-slate-600 hover:text-blue-600 font-medium transition-colors">Liên hệ</a>
             <a 
               href="#register" 
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-orange-500/30"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-orange-500/30 active:scale-95"
             >
               Tham gia cộng đồng
             </a>
@@ -47,7 +47,7 @@ export function Navbar() {
           <a href="#footer" className="block text-slate-600 font-medium py-2 px-2 hover:bg-slate-50" onClick={() => setIsMenuOpen(false)}>Liên hệ</a>
           <a 
             href="#register" 
-            className="block text-center mt-4 bg-orange-500 text-white px-6 py-3 rounded-full font-semibold"
+            className="block text-center mt-4 bg-orange-500 text-white px-6 py-3 rounded-full font-semibold active:scale-95 transition-transform"
             onClick={() => setIsMenuOpen(false)}
           >
             Tham gia cộng đồng
